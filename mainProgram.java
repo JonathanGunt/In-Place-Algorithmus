@@ -6,13 +6,16 @@
 public class mainProgram {
     public static void main(String[] args) {
 
-        List myList = new List();          
-        myList.randomList();
+        
+        List myList = new List();
+        myList.fillList();          
+        myList.getList();
 
-        Sorting sort = new Sorting();
-        sort.sort();
+        int listSize = myList.getList().size();
+        System.out.println(listSize);
 
-        }
-    }
+
+   }
+}
 
 

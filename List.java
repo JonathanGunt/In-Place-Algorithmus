@@ -9,7 +9,7 @@ import java.util.Random;
 public class List {
 
     int x = 0;
-   // public int listSize = 0;
+    
 
 	public void randomList() {
 
@@ -22,13 +22,15 @@ public class List {
             int randomInteger = random.nextInt(100);
 
             list.add(randomInteger);
-            int listSize = 0;
-            listSize = list.size();
-
+            
             int x = list.get(i);
-            System.out.println(x);
+            System.out.println(x);  
+            
         } 
-        
-        
-    }      
+
+        int listSize = list.size();
+        System.out.println(listSize);
+    } 
+    
+   
 }

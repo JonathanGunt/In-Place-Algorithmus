@@ -11,11 +11,12 @@ public class List {
     ArrayList<Integer> list; 
 
     public void fillList() {
-        
-        for(int i = 0; i > 34; i++) {
-            ArrayList<Integer> list = new ArrayList<Integer>();
+        this.list = new ArrayList<Integer>();
+        for(int i = 0; i < 34; i++) {
             Random random = new Random();
             int randomInteger = random.nextInt(100);            // random Int Werte zwischen 0 und 100 erstellen
+            System.out.println("Adding number into list: " + randomInteger);
+            System.out.println("List size now: " + this.list.size());
             list.add(randomInteger);  
         }   
     }

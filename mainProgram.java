@@ -12,9 +12,12 @@ public class mainProgram {
         myList.getList();
 
         int listSize = myList.getList().size();
-        System.out.println(listSize);
+        System.out.println("List size is: " + listSize);
+        System.out.println("------------");
 
-
+        for (int i = 0; i < listSize; i++){
+            System.out.println(myList.getList().get(i));
+        }
    }
 }
 

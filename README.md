@@ -39,7 +39,8 @@ funktion teile(links, rechts)
          wiederhole solange j > links und daten[j] ≥ pivot
              j:= j - 1
          ende
-
+         
+ 
          falls i < j dann
              tausche daten[i] mit daten[j]
          ende

@@ -13,25 +13,30 @@ public class List {
     public void fillList() {
         this.list = new ArrayList<Integer>();
 
-        list.add(1);
-        list.add(3);
+        list.add(6);
+        list.add(5);
         list.add(2);
-        list.add(4);
-
-        /*for(int i = 0; i < 34; i++) {                                          // Random Zahlen in der Liste einfügen
-            Random random = new Random();
-            int randomInteger = random.nextInt(100);                             // random Int Werte zwischen 0 und 100 erstellen
-            System.out.println("Adding number into list: " + randomInteger);
-            System.out.println("List size now: " + this.list.size());
-            list.add(randomInteger);  
-        }*/   
+        list.add(2);
+        list.add(3);
+        list.add(1);
+        list.add(1);
+        list.add(6); 
     }
 
     public ArrayList<Integer> getList() {
         return list;
     }
 
-    
+    public int getPivot() {
+        int sum = 0;
+        for(int x = 0; x < list.size(); x++){
+          sum += list.get(x);
+        }
+
+        int pivot = sum/list.size();
+        System.out.println("Average: " + pivot);
+        return pivot;
+    }
 }
     
 

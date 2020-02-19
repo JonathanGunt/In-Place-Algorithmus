@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Collections;
 
 /**
@@ -12,7 +11,10 @@ public class Sorting {
       
     } 
   
-    public int teile(int links, int rechts) {
+    public void teile(int links, int rechts) {
+
+      int i = links;
+      int j = rechts;
 
       //Objekt List erstellen und mit Werten befüllen
 
@@ -22,28 +24,31 @@ public class Sorting {
 
       // Element an der Pivot Position erhalten
 
-        int pivot = daten.list.get(rechts);       
+        int pivot = daten.getPivot();
         boolean foundLarger = false;
         boolean foundSmaller = false;
           
-        for(int i = links, j = rechts; i <= j; i++, j--){
+        for(i = links , j = rechts -1 ; i <= j; i++, j--){
+
+          System.out.println("Test i,j: " + i + ", " + j);
 
           if(daten.list.get(i) > pivot){
             foundLarger = true;
+            System.out.println("foundLarger = true");
           }
 
           if(daten.list.get(j) < pivot){
             foundSmaller = true;
+            System.out.println("foundSmaller = true");
           }
 
           if (foundLarger && foundSmaller == true){
-            Collections.swap(daten, i, j);
-          }
-
-          if(i == j){
-            return i;
+            Collections.swap(daten.getList(), i, j);
+            System.out.println("Swap!");
           }
         }
+
+        if(i == j){}
     }
 }
 

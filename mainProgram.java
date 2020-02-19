@@ -18,7 +18,11 @@ public class mainProgram {
         for (int i = 0; i < listSize; i++){
             System.out.println(myList.getList().get(i));
         }
+
+        Sorting mytestList = new Sorting();
+        mytestList.teile(0, listSize);
    }
+
 }
 
 

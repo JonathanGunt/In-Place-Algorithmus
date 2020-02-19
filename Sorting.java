@@ -13,9 +13,6 @@ public class Sorting {
   
     public void teile(int links, int rechts) {
 
-      int i = links;
-      int j = rechts;
-
       //Objekt List erstellen und mit Werten befüllen
 
       List daten = new List();                  
@@ -24,31 +21,37 @@ public class Sorting {
 
       // Element an der Pivot Position erhalten
 
-        int pivot = daten.getPivot();
-        boolean foundLarger = false;
-        boolean foundSmaller = false;
-          
-        for(i = links , j = rechts -1 ; i <= j; i++, j--){
+      int ii = links;
+      int jj = rechts -1;
+      int i = 0;
+      int j = rechts - 1;
+      int pivot = daten.getPivot();
 
-          System.out.println("Test i,j: " + i + ", " + j);
+      while(ii < jj){
 
-          if(daten.list.get(i) > pivot){
-            foundLarger = true;
-            System.out.println("foundLarger = true");
-          }
-
-          if(daten.list.get(j) < pivot){
-            foundSmaller = true;
-            System.out.println("foundSmaller = true");
-          }
-
-          if (foundLarger && foundSmaller == true){
-            Collections.swap(daten.getList(), i, j);
-            System.out.println("Swap!");
-          }
+        for (i = 0 ; i < rechts && daten.getList().get(i) < pivot; i++) {
+          ii = i + 1;
         }
 
-        if(i == j){}
+        //System.out.println("Found a x ! " + i);
+
+        for (j = rechts - 1; j > links && daten.getList().get(j) >= pivot; j--){
+          jj = j - 1;  
+        }
+
+        //System.out.println("Found j ! " + j);
+        
+        if (ii < jj){
+          Collections.swap(daten.getList(), i, j);
+         // System.out.println("Swap!");
+        }
+      }
+
+        System.out.println("--------------");
+        System.out.println("Sorted List ! :");
+      for (int k = 0; k < daten.list.size(); k++) {
+        System.out.println(daten.list.get(k));
+      }
     }
 }
 

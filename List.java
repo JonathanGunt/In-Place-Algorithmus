@@ -3,7 +3,6 @@
  */
 
 import java.util.ArrayList;
-//import java.util.Random;
 
 
 public class List {
@@ -40,23 +39,7 @@ public class List {
 
         int average = sum/list.size();
         System.out.println("Average: " + average);
-
-       /* boolean foundPivot = false;
-        int indexOfPivot = 0;
-        int indexCounter = 0;
-
-            while (foundPivot == false) {
-                if(list.indexOf(average + indexCounter) != -1 || list.indexOf(average - indexCounter) != -1 ){
-                    foundPivot = true;
-                    indexOfPivot = list.indexOf(average + indexCounter);
-                }else{
-                    indexCounter ++;
-                }
-                
-            }
         
-        //System.out.println("IndexOfPivot: " + indexOfPivot);
-        */
         return average;
     }
 }

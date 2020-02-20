@@ -21,13 +21,12 @@ public class Sorting {
       }
     } 
   
+
     public int teile(int links, int rechts) {
 
       // Element an der Pivot Position erhalten
-      
       int i = links;
       int j = rechts - 1;
-      //int pivot = this.daten.getPivot();
       int pivot = this.daten.getList().get(rechts);
 
       System.out.println("links " + links + " rechts " + rechts);

@@ -6,8 +6,8 @@
 public class mainProgram {
     public static void main(String[] args) {
 
-        Sorting mytestList = new Sorting();
-        mytestList.sort(0, mytestList.daten.list.size() - 1);
+        Sorting myList = new Sorting();
+        myList.sort(0, myList.daten.list.size() - 1);
    }
 }
 

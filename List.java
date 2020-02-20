@@ -21,7 +21,9 @@ public class List {
         list.add(5);
         list.add(3);
         list.add(2);
+        list.add(6);
         list.add(4); 
+        list.add(2);
     }
 
     //ArrayList übergeben
@@ -39,7 +41,7 @@ public class List {
         int average = sum/list.size();
         System.out.println("Average: " + average);
 
-        boolean foundPivot = false;
+       /* boolean foundPivot = false;
         int indexOfPivot = 0;
         int indexCounter = 0;
 
@@ -54,6 +56,7 @@ public class List {
             }
         
         //System.out.println("IndexOfPivot: " + indexOfPivot);
+        */
         return average;
     }
 }

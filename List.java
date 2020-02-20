@@ -4,7 +4,7 @@
 
 import java.util.ArrayList;
 
-
+//Liste beim aufrufen der Klasse erstellen
 public class List {
     List(){
         this.fillList();
@@ -23,14 +23,23 @@ public class List {
         list.add(6);
         list.add(4); 
         list.add(2);
+
+        //Unsortierte Liste ausgeben
+        System.out.println("--------------");
+        System.out.println("Unsorted List:");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
     }
+
+    
 
     //ArrayList übergeben
     public ArrayList<Integer> getList() {
         return list;
     }
 
-    //Index des Pivot Elements übergeben
+    //Durchschnitt berechnen
     public int getPivot() {
         int sum = 0;
         for(int x = 0; x < list.size(); x++){
@@ -39,7 +48,7 @@ public class List {
 
         int average = sum/list.size();
         System.out.println("Average: " + average);
-        
+
         return average;
     }
 }

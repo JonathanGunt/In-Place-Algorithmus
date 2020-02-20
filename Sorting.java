@@ -20,11 +20,10 @@ public class Sorting {
         sort(teiler +1, rechts);
       }
     } 
-  
 
     public int teile(int links, int rechts) {
 
-      // Element an der Pivot Position erhalten
+      //Pivot Position erhalten
       int i = links;
       int j = rechts - 1;
       int pivot = this.daten.getList().get(rechts);
@@ -32,32 +31,25 @@ public class Sorting {
       System.out.println("links " + links + " rechts " + rechts);
       System.out.println("Pivot " + pivot);
       
-
       while(i < j){
 
-        System.out.println("i; RECHTS, 'value < pivot': " + i + "," + rechts + "," + daten.getList().get(i) + " < " + pivot);
         for (; i < rechts && daten.getList().get(i) < pivot;) {  
           i = i + 1;
-          System.out.println("i; RECHTS, 'value < pivot': " + i + "," + rechts + "," + daten.getList().get(i) + " < " + pivot);
         }
 
-        System.out.println("j; links, 'value >= pivot': " + j + "," + links + "," + daten.getList().get(j) + " >= " + pivot);
         for (; j > links && daten.getList().get(j) >= pivot;){
           j = j - 1;            
-          System.out.println("j; links, 'value >= pivot': " + j + "," + links + "," + daten.getList().get(j) + " >= " + pivot);
         }
-        System.out.println("new i,j: " + i + "," +j);
+
         if (i < j){
-          System.out.println("swapping i,j: " + i + "," +j);
           System.out.println("swapping [i],[j]: " + daten.getList().get(i) + "," +daten.getList().get(j));
           Collections.swap(daten.getList(), i, j);
         }
       }
 
+      //Pivot tauschen
       Collections.swap(daten.getList(), rechts, i);
-      System.out.println("Swapping i and rechts");
-
-
+      
       // Sortierte Teilliste output 
       System.out.println("--------------");
       System.out.println("Sorted List ! :");
@@ -65,10 +57,7 @@ public class Sorting {
       for (int k = 0; k < daten.list.size(); k++) {
         System.out.println(daten.list.get(k));
       }
-      System.out.println("Return Value: " + i);
-      return i;
-      
-        
+      return i;  
     }
 }
 

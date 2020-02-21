@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 //Liste beim aufrufen der Klasse erstellen
 public class List {
+    
     List(){
         this.fillList();
     }
@@ -31,8 +32,6 @@ public class List {
             System.out.println(list.get(i));
         }
     }
-
-    
 
     //ArrayList übergeben
     public ArrayList<Integer> getList() {

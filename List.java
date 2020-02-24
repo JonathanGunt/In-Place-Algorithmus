@@ -4,9 +4,10 @@
 
 import java.util.ArrayList;
 
-//Liste beim aufrufen der Klasse erstellen
 public class List {
     
+    
+    //Liste beim aufrufen der Klasse erstellen
     List(){
         this.fillList();
     }

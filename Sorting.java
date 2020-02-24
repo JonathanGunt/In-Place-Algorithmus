@@ -52,7 +52,7 @@ public class Sorting {
       
       // Sortierte Teilliste output 
       System.out.println("--------------");
-      System.out.println("Sorted List ! :");
+      System.out.println("Sorting List ! :");
 
       for (int k = 0; k < daten.list.size(); k++) {
         System.out.println(daten.list.get(k));
